@@ -1,0 +1,107 @@
+@mixin breakpoint($point) {
+	@if $point==sm {
+		@media (min-width: 576px) {
+			@content;
+		}
+	} @else if $point==max-sm {
+		@media (max-width: 575px) {
+			@content;
+		}
+	} @else if $point==md {
+		@media (min-width: 768px) {
+			@content;
+		}
+	} @else if $point==max-md {
+		@media (max-width: 767px) {
+			@content;
+		}
+	} @else if $point==lg {
+		@media (min-width: 992px) {
+			@content;
+		}
+	} @else if $point==max-lg {
+		@media (max-width: 991px) {
+			@content;
+		}
+	} @else if $point==xl {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	} @else if $point==max-xl {
+		@media (max-width: 1199px) {
+			@content;
+		}
+	} @else if $point==xxl {
+		@media (min-width: 1400px) {
+			@content;
+		}
+	} @else if $point==max-xxl {
+		@media (max-width: 1399px) {
+			@content;
+		}
+	}
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+:root {
+	--base: #6390f5;
+	--success: #5fda40;
+	--redish: #f563a9;
+	--white: #ffffff;
+	--title: #0e1227;
+	--body: #ffffff;
+	--section: #f9fafe;
+	--text: #8c8d98;
+}
+#root {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	footer {
+		margin-top: auto;
+	}
+}
+body {
+	background: var(--body);
+	padding: 0;
+	margin: 0;
+	color: var(--text);
+	font-size: 14px;
+	line-height: 28px;
+	font-family: "Poppins", sans-serif;
+
+	@include breakpoint(sm) {
+		font-size: 16px;
+	}
+}
+.bg-section {
+	background: var(--section);
+}
+.bg-body {
+	background: var(--body);
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ul {
+	padding: 0;
+	margin: 0;
+	li {
+		list-style: none;
+	}
+}
+a {
+	text-decoration: none;
+	transition: all ease 0.3s;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--title);
+	font-weight: 700;
+}
