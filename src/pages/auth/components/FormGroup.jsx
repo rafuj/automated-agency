@@ -6,7 +6,7 @@ const FormGroup = ({ label, ...rest }) => {
 			<label className="form-label" for={label}>
 				{label}
 			</label>
-			<input className="form-control" {...rest} />
+			<input className="form-control" id={label} {...rest} />
 		</div>
 	);
 };
