@@ -2,15 +2,20 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { sidebar_menu } from "../assets/data/sidebar_menu";
 import author_img from "../assets/img/author.png";
-import { Cog, LogoWhite, SignOutIcon } from "../icons/IconTheme";
+import { useGlobalContext } from "../context/context";
+import { Bar, Close, Cog, LogoWhite, SignOutIcon } from "../icons/IconTheme";
 const Layout = ({ children }) => {
+	const { isSidebarOpen, closeSidebar } = useGlobalContext();
 	return (
 		<main className="main">
-			<aside className="sidebar">
+			<aside className={`sidebar ${isSidebarOpen ? "active" : ""}`}>
 				<div className="sidebar-logo">
 					<Link to="#">
 						<LogoWhite />
 					</Link>
+					<div className="close-icon d-lg-none" onClick={closeSidebar}>
+						<Close />
+					</div>
 				</div>
 				<div className="sidebar-author">
 					<div className="img">
@@ -30,16 +35,33 @@ const Layout = ({ children }) => {
 						))}
 				</ul>
 				<div className="sidebar-bottom-btns">
-					<button>
+					<Link to="#" className="bottom-btn">
 						<Cog />
-					</button>
-					<button>
+					</Link>
+					<Link to="#" className="bottom-btn">
 						<SignOutIcon />
-					</button>
+					</Link>
 				</div>
 			</aside>
 			<article className="article">{children}</article>
+			<div
+				className={`overlay d-lg-none ${isSidebarOpen ? "active" : ""}`}
+				onClick={closeSidebar}
+			></div>
 		</main>
+	);
+};
+
+export const LayoutHeader = ({ title, children }) => {
+	const { openSidebar } = useGlobalContext();
+	return (
+		<header className="article-header container-fluid d-flex justify-content-between align-items-center">
+			<h4 className="title text-base text-uppercase m-0 me-auto">{title}</h4>
+			<div>{children}</div>
+			<div className="d-lg-none ms-3" onClick={openSidebar}>
+				<Bar />
+			</div>
+		</header>
 	);
 };
 

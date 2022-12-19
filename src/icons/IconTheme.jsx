@@ -159,3 +159,48 @@ export const SignOutIcon = () => {
 		</svg>
 	);
 };
+export const Close = () => {
+	return (
+		<>
+			<svg width={18} x={0} y={0} viewBox="0 0 512 512">
+				<g>
+					<g id="_02_User" data-name="02 User">
+						<path
+							d="m25 512a25 25 0 0 1 -17.68-42.68l462-462a25 25 0 0 1 35.36 35.36l-462 462a24.93 24.93 0 0 1 -17.68 7.32z"
+							fill="var(--redish)"
+							data-original="var(--redish)"
+						/>
+						<path
+							d="m487 512a24.93 24.93 0 0 1 -17.68-7.32l-462-462a25 25 0 0 1 35.36-35.36l462 462a25 25 0 0 1 -17.68 42.68z"
+							fill="var(--redish)"
+							data-original="var(--redish)"
+						/>
+					</g>
+				</g>
+			</svg>
+		</>
+	);
+};
+
+export const Bar = () => {
+	return (
+		<svg width={31} height={30} viewBox="0 0 31 30" fill="none">
+			<g clipPath="url(#clip0_3_218)">
+				<path
+					d="M22.8193 22.5V25H7.81934V22.5H22.8193ZM26.5693 13.75V16.25H4.06934V13.75H26.5693ZM22.8193 5V7.5H7.81934V5H22.8193Z"
+					fill="var(--title)"
+				/>
+			</g>
+			<defs>
+				<clipPath id="clip0_3_218">
+					<rect
+						width={30}
+						height={30}
+						fill="var(--title)"
+						transform="translate(0.319336)"
+					/>
+				</clipPath>
+			</defs>
+		</svg>
+	);
+};
