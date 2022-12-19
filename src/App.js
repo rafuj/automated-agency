@@ -8,6 +8,7 @@ function App() {
 		<>
 			<BrowserRouter>
 				<Routes>
+					<Route path="/" element={<SignIn />} />
 					<Route path="profile">
 						<Route path="inbox" element={<Inbox />} />
 					</Route>

@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import img from "../../../assets/img/author.png";
 import Layout, { LayoutHeader } from "../../../components/Layout";
 import { Cog, GroupTeam, SignOutIcon } from "../../../icons/IconTheme";
+import InboxChatting from "./components/InboxChatting";
+import InboxSidebar from "./components/InboxSidebar";
 const Inbox = () => {
+	const [activeIndex, setActiveIndex] = useState(0);
 	return (
 		<>
 			<Layout>
@@ -34,6 +37,15 @@ const Inbox = () => {
 						</ul>
 					</div>
 				</LayoutHeader>
+				<div className="inbox-article">
+					{/* Inbox Sidebar */}
+					<InboxSidebar
+						activeIndex={activeIndex}
+						setActiveIndex={setActiveIndex}
+					/>
+					{/* Inbox Chatting*/}
+					<InboxChatting activeIndex={activeIndex} />
+				</div>
 			</Layout>
 		</>
 	);
