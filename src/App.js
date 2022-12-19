@@ -4,6 +4,7 @@ import SignUp from "./pages/auth/SignUp";
 import Inbox from "./pages/profile/inbox/Inbox";
 import SettingBilling from "./pages/profile/setting/SettingBilling";
 import SettingPlan from "./pages/profile/setting/SettingPlan";
+import SettingProfile from "./pages/profile/setting/SettingProfile";
 
 function App() {
 	return (
@@ -18,7 +19,7 @@ function App() {
 							<Route index element={<SettingPlan />} />
 							<Route path="plans" element={<SettingPlan />} />
 							<Route path="billing" element={<SettingBilling />} />
-							<Route path="profile" element={<SettingPlan />} />
+							<Route path="profile" element={<SettingProfile />} />
 						</Route>
 					</Route>
 					<Route path="auth">

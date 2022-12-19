@@ -1026,3 +1026,32 @@ body {
 		}
 	}
 }
+.setting-profile-card {
+	background: var(--section);
+	.form-control {
+		background: var(--body);
+	}
+	padding: 20px;
+	border-radius: 20px;
+	.setting-profile-card-top {
+		gap: 15px;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 29px;
+		h5 {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 22px;
+		}
+		.btn {
+			border: 1px solid #6390f5;
+			border-radius: 15px;
+			padding: 7px 20px;
+			font-weight: 500;
+		}
+		.btn-outline-primary {
+			border-color: var(--border);
+		}
+	}
+}

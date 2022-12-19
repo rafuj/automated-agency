@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Layout, { LayoutHeader } from "../../../components/Layout";
 import { DownLoadIcon } from "../../../icons/IconTheme";
 
@@ -64,7 +64,9 @@ const SettingBilling = () => {
 											</td>
 											<td>
 												<div className="text-center">
-													<DownLoadIcon />
+													<Link to="#">
+														<DownLoadIcon />
+													</Link>
 												</div>
 											</td>
 										</tr>
