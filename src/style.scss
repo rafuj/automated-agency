@@ -423,6 +423,9 @@ h6 {
 .article-header {
 	min-height: 57px;
 	border-bottom: 1px solid var(--border);
+	position: sticky;
+	top: 0;
+	z-index: 99;
 }
 .container-fluid {
 	@include breakpoint(xl) {
@@ -796,6 +799,230 @@ body {
 		}
 		.btn:not(:last-child) {
 			border-right: 1px solid var(--border);
+		}
+	}
+}
+.border-bottom {
+	border-color: var(--border);
+}
+.setting-nav-menu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	column-gap: 44px;
+	margin-bottom: -1px;
+	li {
+		a {
+			display: inline-block;
+			padding: 0 0 10px;
+			border-bottom: 2px solid transparent;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 22px;
+			color: var(--text);
+			&.active {
+				font-weight: 600;
+				border-color: var(--base);
+				color: var(--base);
+			}
+		}
+	}
+}
+.mb-20 {
+	margin-bottom: 20px;
+}
+.filter-btn {
+	padding: 5px;
+	display: inline-flex;
+	padding: 5px;
+	border-radius: 25px;
+	background: var(--section);
+	margin-bottom: 20px;
+	li {
+		height: 40px;
+		padding: 9px 20px;
+		border-radius: 20px;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 600;
+		&.active {
+			color: var(--base);
+			background: var(--white);
+		}
+	}
+}
+.mb-10 {
+	margin-bottom: 10px;
+}
+.plan-item {
+	width: calc(50% - 10px);
+	max-width: 351px;
+	background: #ffffff;
+	box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
+	text-align: left;
+	.plan-inner {
+		padding: 20px;
+		padding-bottom: 0;
+	}
+	.title {
+		font-weight: 600;
+		font-size: 25px;
+		line-height: 34px;
+		color: var(--base);
+		margin: 0;
+	}
+	.price {
+		font-weight: 600;
+		font-size: 25px;
+		line-height: 34px;
+		margin: 0;
+		sub {
+			bottom: 0;
+			margin-bottom: 0;
+			font-weight: 400;
+			font-size: 12px;
+			line-height: 16px;
+			color: var(--text);
+		}
+	}
+	.subtxt {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 16px;
+		margin-bottom: 20px;
+	}
+	.details-info {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 19px;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		margin-bottom: 20px;
+		li {
+			display: flex;
+			svg {
+				transform: translateY(5px);
+			}
+			span {
+				width: 0;
+				flex-grow: 1;
+				padding-left: 10px;
+			}
+		}
+	}
+	.btn {
+		height: 45px;
+		border-radius: 19px;
+		width: 100%;
+		transition: all ease 0.3s;
+	}
+	transition: all ease 0.3s;
+	&:nth-of-type(3n + 2),
+	&:hover {
+		background: var(--title);
+		color: var(--white);
+		.text-redish {
+			sub {
+				color: var(--white);
+			}
+		}
+		.btn-outline-primary {
+			background: var(--base);
+			border-color: var(--base);
+			color: var(--white);
+		}
+	}
+}
+.btn-outline-primary {
+	border-color: var(--base);
+	color: var(--base);
+	&:hover {
+		background: var(--base);
+		border-color: var(--base);
+		color: var(--white);
+	}
+}
+.plans-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+}
+.billing-payment-card {
+	border-radius: 20px;
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 15px;
+	h6 {
+		margin-bottom: 10px;
+	}
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		li {
+			font-size: 12px;
+			line-height: 16px;
+			color: var(--title);
+		}
+	}
+	.btn {
+		height: 45px;
+		border-radius: 10px;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 22px;
+		padding: 0 20px;
+		@include breakpoint(max-lg) {
+			font-weight: 500;
+			font-size: 14px;
+			height: 40px;
+		}
+	}
+}
+.__billing-table {
+	background: var(--section);
+	padding: 20px;
+
+	border-radius: 20px;
+	.table {
+		margin: 0;
+		vertical-align: middle;
+		thead {
+			th {
+				font-weight: 700;
+				font-size: 12px;
+				line-height: 16px;
+				text-transform: uppercase;
+				color: var(--text);
+			}
+		}
+		.table-date {
+			h6 {
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 19px;
+				margin-bottom: 10px;
+			}
+			font-size: 12px;
+			line-height: 16px;
+			color: var(--text);
+		}
+		td {
+			padding: 15px 0;
+		}
+		tbody {
+			tr:last-child {
+				td {
+					border-bottom: none;
+				}
+			}
 		}
 	}
 }
