@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { inbox_data } from "../../../../assets/data/inbox_data";
-import SearchForm from "./SearchForm";
+import SearchForm from "../../../../components/SearchForm";
 
 const InboxSidebar = ({ activeIndex, setActiveIndex }) => {
 	const [read, setRead] = useState(true);

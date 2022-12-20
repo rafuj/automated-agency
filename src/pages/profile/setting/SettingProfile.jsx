@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import FormGroup from "../../../components/FormGroup";
 import Layout, { LayoutHeader } from "../../../components/Layout";
-import FormGroup from "../../auth/components/FormGroup";
 
 const SettingProfile = () => {
 	return (

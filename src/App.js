@@ -1,6 +1,16 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SignIn from "./pages/auth/SignIn";
 import SignUp from "./pages/auth/SignUp";
+import AddCsv from "./pages/lead-lists/AddCsv";
+import AddGoogle from "./pages/lead-lists/AddGoogle";
+import AddGoogleCriteria from "./pages/lead-lists/AddGoogleCriteria";
+import AddGoogleCriteriaTwo from "./pages/lead-lists/AddGoogleCriteriaTwo";
+import AddInstagram from "./pages/lead-lists/AddInstagram";
+import AddInstagramCriteria from "./pages/lead-lists/AddInstagramCriteria";
+import AddManual from "./pages/lead-lists/AddManual";
+import AddNewLead from "./pages/lead-lists/AddNewLead";
+import CreateLead from "./pages/lead-lists/CreateLead";
+import SelectLeadSource from "./pages/lead-lists/SelectLeadSource";
 import Inbox from "./pages/profile/inbox/Inbox";
 import SettingBilling from "./pages/profile/setting/SettingBilling";
 import SettingPlan from "./pages/profile/setting/SettingPlan";
@@ -26,6 +36,28 @@ function App() {
 						<Route index element={<SignIn />} />
 						<Route path="signin" element={<SignIn />} />
 						<Route path="signup" element={<SignUp />} />
+					</Route>
+					<Route path="leadlist">
+						<Route index element={<AddNewLead />} />
+						<Route path="add" element={<AddNewLead />} />
+						<Route path="create" element={<CreateLead />} />
+						<Route path="source" element={<SelectLeadSource />} />
+						<Route path="add-mannual" element={<AddManual />} />
+						<Route path="add-csv" element={<AddCsv />} />
+						<Route path="add-google" element={<AddGoogle />} />
+						<Route
+							path="add-google-criteria"
+							element={<AddGoogleCriteria />}
+						/>
+						<Route
+							path="add-google-criteria-two"
+							element={<AddGoogleCriteriaTwo />}
+						/>
+						<Route path="add-instagram" element={<AddInstagram />} />
+						<Route
+							path="add-instagram-criteria"
+							element={<AddInstagramCriteria />}
+						/>
 					</Route>
 				</Routes>
 			</BrowserRouter>

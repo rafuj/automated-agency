@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import FormGroup from "../../components/FormGroup";
 import AuthLayout from "./components/AuthLayout";
 import CheckGroup from "./components/CheckGroup";
-import FormGroup from "./components/FormGroup";
 import LoginWithGoogle from "./components/LoginWithGoogle";
 
 const SignIn = () => {

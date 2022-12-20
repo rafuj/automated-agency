@@ -14,7 +14,7 @@ export const sidebar_menu = [
 	},
 	{
 		icon: <LeadListIcon />,
-		link: "/profile/lead-list",
+		link: "/leadlist",
 		text: "Lead Lists",
 	},
 	{
