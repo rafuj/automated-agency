@@ -245,9 +245,10 @@ h6 {
 	position: relative;
 }
 .check-icon {
+	display: flex;
 	position: absolute;
 	left: 0;
-	top: -1px;
+	top: 8px;
 }
 .btn-base {
 	border: 1px solid var(--base);
