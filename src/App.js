@@ -10,6 +10,7 @@ import AddInstagramCriteria from "./pages/lead-lists/AddInstagramCriteria";
 import AddManual from "./pages/lead-lists/AddManual";
 import AddNewLead from "./pages/lead-lists/AddNewLead";
 import CreateLead from "./pages/lead-lists/CreateLead";
+import LeadList from "./pages/lead-lists/LeadList";
 import SelectLeadSource from "./pages/lead-lists/SelectLeadSource";
 import Inbox from "./pages/profile/inbox/Inbox";
 import SettingBilling from "./pages/profile/setting/SettingBilling";
@@ -38,7 +39,7 @@ function App() {
 						<Route path="signup" element={<SignUp />} />
 					</Route>
 					<Route path="leadlist">
-						<Route index element={<AddNewLead />} />
+						<Route index element={<LeadList />} />
 						<Route path="add" element={<AddNewLead />} />
 						<Route path="create" element={<CreateLead />} />
 						<Route path="source" element={<SelectLeadSource />} />
