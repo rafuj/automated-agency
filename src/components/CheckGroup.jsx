@@ -3,12 +3,13 @@ import { CheckIcon } from "../icons/IconTheme";
 
 const CheckGroup = ({ text, checked, ...rest }) => {
 	const [status, setStatus] = useState(checked ? true : false);
+	console.log(status);
 	return (
 		<label className="form-check">
 			<input
 				type="checkbox"
 				className={`form-check-input ${status ? "d-none" : ""}`}
-				value={status}
+				checked={status}
 				{...rest}
 				onChange={(e) => setStatus(e.target.checked)}
 			/>
