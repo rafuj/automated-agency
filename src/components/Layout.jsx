@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
 					{sidebar_menu &&
 						sidebar_menu.map(({ icon, link, text }, i) => (
 							<li key={i}>
-								<NavLink to={link}>
+								<NavLink to={link} onClick={closeSidebar}>
 									{icon} <span>{text}</span>
 								</NavLink>
 							</li>
@@ -64,5 +64,4 @@ export const LayoutHeader = ({ title, children }) => {
 		</header>
 	);
 };
-
 export default Layout;

@@ -9,7 +9,7 @@ import {
 export const sidebar_menu = [
 	{
 		icon: <GroupTeam />,
-		link: "/profile/account",
+		link: "/account",
 		text: "Accounts",
 	},
 	{
@@ -19,12 +19,12 @@ export const sidebar_menu = [
 	},
 	{
 		icon: <CampaignIcon />,
-		link: "/profile/campaign",
+		link: "/campaign",
 		text: "Campains",
 	},
 	{
 		icon: <Analytics />,
-		link: "/profile/analytics",
+		link: "/analytics",
 		text: "Analytics",
 	},
 	{

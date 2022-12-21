@@ -1360,3 +1360,155 @@ body {
 .word-nowrap {
 	white-space: nowrap;
 }
+.analytics-header-btn {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	.cmn-btn,
+	.form-control {
+		border-color: var(--base);
+		font-weight: 500;
+	}
+	.cmn-btn {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	.form-group {
+		margin: 0;
+		svg {
+			path[stroke="#8C8D98"] {
+				stroke: var(--base);
+			}
+		}
+	}
+	.form-control {
+		padding-right: 30px;
+		color: var(--base);
+		option {
+			color: var(--title);
+		}
+	}
+	@include breakpoint(max-sm) {
+		gap: 5px;
+		margin-left: 5px;
+		margin-right: -8px;
+		.cmn-btn,
+		.form-control {
+			font-size: 12px;
+			border-radius: 8px;
+		}
+		.cmn-btn {
+			padding: 5px 8px;
+		}
+	}
+}
+.analytics-card {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	padding: 5px;
+	border: 1px solid var(--border);
+	border-radius: 15px;
+	position: relative;
+	.icon {
+		width: 113px;
+		svg {
+			width: 100%;
+		}
+	}
+	.content {
+		width: 0;
+		flex-grow: 1;
+		padding-left: 20px;
+		.name {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 22px;
+			text-transform: uppercase;
+			color: var(--base);
+			margin-bottom: 20px;
+		}
+		.value {
+			font-weight: 700;
+			font-size: 30px;
+			line-height: 41px;
+			margin: 0;
+		}
+		.subtext {
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 16px;
+			position: absolute;
+			right: 20px;
+			bottom: 20px;
+		}
+	}
+	@media (max-width: 1280px) {
+		.icon {
+			width: 90px;
+		}
+		.content {
+			.name {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	@media (max-width: 1199px) {
+		.icon {
+			width: 80px;
+		}
+		.content {
+			padding-left: 10px;
+			.name {
+				font-size: 14px;
+				margin-bottom: 0;
+			}
+			.value {
+				font-size: 24px;
+			}
+			.subtext {
+				right: 10px;
+				bottom: 10px;
+			}
+		}
+	}
+	@media (575px < width < 767px) {
+		.icon {
+			width: 113px;
+		}
+		.content {
+			padding-left: 20px;
+			.name {
+				font-size: 16px;
+				margin-bottom: 20px;
+			}
+			.value {
+				font-size: 30px;
+			}
+			.subtext {
+				right: 20px;
+				bottom: 20px;
+			}
+		}
+	}
+}
+div[class*="col"] {
+	&:nth-of-type(3n + 2) {
+		.analytics-card {
+			.content {
+				.name {
+					color: var(--redish);
+				}
+			}
+		}
+	}
+	&:nth-of-type(3n + 3) {
+		.analytics-card {
+			.content {
+				.name {
+					color: var(--success);
+				}
+			}
+		}
+	}
+}

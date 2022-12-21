@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Analytics from "./pages/analytics/Analytics";
 import SignIn from "./pages/auth/SignIn";
 import SignUp from "./pages/auth/SignUp";
 import AddCsv from "./pages/lead-lists/AddCsv";
@@ -37,6 +38,9 @@ function App() {
 						<Route index element={<SignIn />} />
 						<Route path="signin" element={<SignIn />} />
 						<Route path="signup" element={<SignUp />} />
+					</Route>
+					<Route path="analytics">
+						<Route index element={<Analytics />} />
 					</Route>
 					<Route path="leadlist">
 						<Route index element={<LeadList />} />

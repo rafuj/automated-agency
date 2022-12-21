@@ -4,9 +4,11 @@ import { IconDown } from "../icons/IconTheme";
 const FormGroup = ({ label, data, ...rest }) => {
 	return (
 		<div className="form-group">
-			<label className="form-label" htmlFor={label}>
-				{label}
-			</label>
+			{label && (
+				<label className="form-label" htmlFor={label}>
+					{label}
+				</label>
+			)}
 			{data ? (
 				<div className="select-item">
 					<select {...rest} className="form-control">
@@ -21,7 +23,7 @@ const FormGroup = ({ label, data, ...rest }) => {
 					</div>
 				</div>
 			) : (
-				<input className="form-control" id={label} {...rest} />
+				<input className="form-control" id={label && label} {...rest} />
 			)}
 		</div>
 	);
