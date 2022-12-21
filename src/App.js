@@ -3,7 +3,10 @@ import Analytics from "./pages/analytics/Analytics";
 import SignIn from "./pages/auth/SignIn";
 import SignUp from "./pages/auth/SignUp";
 import CampaignAnalytics from "./pages/campaigns/CampaignAnalytics";
+import CampaignLead from "./pages/campaigns/CampaignLead";
 import CampaignList from "./pages/campaigns/CampaignList";
+import CampaignOption from "./pages/campaigns/CampaignOption";
+import CampaignSchedule from "./pages/campaigns/CampaignSchedule";
 import AddCsv from "./pages/lead-lists/AddCsv";
 import AddGoogle from "./pages/lead-lists/AddGoogle";
 import AddGoogleCriteria from "./pages/lead-lists/AddGoogleCriteria";
@@ -71,10 +74,10 @@ function App() {
 						<Route path=":id">
 							<Route index element={<CampaignAnalytics />} />
 							<Route path="analytics" element={<CampaignAnalytics />} />
-							<Route path="lead" element={<CampaignAnalytics />} />
+							<Route path="lead" element={<CampaignLead />} />
 							<Route path="sequence" element={<CampaignAnalytics />} />
-							<Route path="schedule" element={<CampaignAnalytics />} />
-							<Route path="option" element={<CampaignAnalytics />} />
+							<Route path="schedule" element={<CampaignSchedule />} />
+							<Route path="option" element={<CampaignOption />} />
 						</Route>
 					</Route>
 				</Routes>

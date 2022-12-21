@@ -1,6 +1,6 @@
 import React from "react";
 import AnalyticsChart from "../analytics/components/AnalyticsChart";
-import CampaignSingle from "./components/CampaignSingle";
+import CampaignSingleLayout from "./components/CampaignSingleLayout";
 const data = [
 	{
 		name: "leads",
@@ -21,6 +21,7 @@ const data = [
 	{
 		name: "replied",
 		value: "34",
+		reply_rate: "70%",
 	},
 ];
 const CampaignAnalytics = ({ id }) => {
@@ -29,14 +30,6 @@ const CampaignAnalytics = ({ id }) => {
 			name: "Campaign Lead",
 			data: [30, 40, 25, 55, 25, 35, 55, 42, 28],
 		},
-		// {
-		// 	name: "Message Open",
-		// 	data: [25, 35, 20, 50, 20, 30, 50, 37, 23],
-		// },
-		// {
-		// 	name: "Message Replay",
-		// 	data: [20, 30, 15, 45, 15, 25, 45, 32, 18],
-		// },
 	];
 
 	const options = {
@@ -129,23 +122,28 @@ const CampaignAnalytics = ({ id }) => {
 		},
 	};
 	return (
-		<CampaignSingle pageTitle="campaigns1">
+		<CampaignSingleLayout>
 			<div className="analytics-card-wrapper-2">
 				{data && data.map((item, i) => <AnalyticsCard key={i} {...item} />)}
 			</div>
 			<div className="mt-4">
 				<AnalyticsChart series={series} options={options} />
 			</div>
-		</CampaignSingle>
+		</CampaignSingleLayout>
 	);
 };
 
-const AnalyticsCard = ({ name, value }) => {
+const AnalyticsCard = ({ name, value, reply_rate }) => {
 	return (
 		<>
 			<div className="analytics-card-2">
 				<h6 className="name">{name}</h6>
-				<h2 className="value">{value}</h2>
+				<div className="d-flex justify-content-between align-items-center">
+					<h2 className="value">{value}</h2>
+					{reply_rate && (
+						<span className="badge bg--success">{reply_rate}</span>
+					)}
+				</div>
 			</div>
 		</>
 	);

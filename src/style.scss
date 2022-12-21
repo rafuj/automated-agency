@@ -1096,6 +1096,7 @@ body {
 	border: 1px solid var(--base);
 	border-radius: 15px;
 	padding: 6px 30px;
+	transition: all ease 0.3s;
 	&.btn-outline,
 	&:hover {
 		color: var(--base);
@@ -1107,6 +1108,32 @@ body {
 	&.btn-outline:hover {
 		border-color: var(--base);
 		background: var(--base);
+		color: var(--white);
+	}
+	&.bg-redish {
+		border-color: var(--redish);
+	}
+	&.bg-base {
+		border-color: var(--base);
+	}
+	&.btn-sm {
+		padding: 2px 15px;
+	}
+}
+.rounded-10 {
+	border-radius: 10px;
+}
+.bg-base {
+	background: var(--base);
+	&:hover {
+		background: var(--base);
+		color: var(--white);
+	}
+}
+.bg-redish {
+	background: var(--redish);
+	&:hover {
+		background: var(--redish);
 		color: var(--white);
 	}
 }
@@ -1345,7 +1372,7 @@ body {
 	}
 }
 .bg-soft-success {
-	color: #5fda40;
+	color: var(--success);
 	background: rgba(#5fda40, 0.18);
 }
 .bg-soft-secondary {
@@ -1354,7 +1381,7 @@ body {
 	color: var(--text);
 }
 .bg-soft-danger {
-	color: #f563a9;
+	color: var(--redish);
 	background: rgba(140, 141, 152, 0.2);
 	border-radius: 51px;
 }
@@ -1661,5 +1688,44 @@ div[class*="col"] {
 				line-height: 1.3;
 			}
 		}
+	}
+	.badge {
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 16px;
+		border-radius: 18px;
+	}
+}
+
+.bg--success {
+	background: var(--success);
+}
+@include breakpoint(max-sm) {
+	.header-btn {
+		font-size: 14px;
+		padding: 5px 13px;
+	}
+}
+.__gap-15px {
+	gap: 15px;
+}
+.border-base {
+	border-color: var(--base) !important;
+}
+.w-0 {
+	width: 0;
+}
+.table-author {
+	img {
+		width: 22px;
+		aspect-ratio: 1;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 22px;
+	span {
+		width: 130px;
 	}
 }

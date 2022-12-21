@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import CampaignLayout from "./CampaignLayout";
-const CampaignSingle = ({ pageTitle, children }) => {
+import Layout, { LayoutHeader } from "../../../components/Layout";
+const CampaignSingleLayout = ({ children }) => {
 	const campaignLink = [
 		{
 			name: "Analytics",
@@ -24,9 +24,21 @@ const CampaignSingle = ({ pageTitle, children }) => {
 			link: `/campaign/1/option`,
 		},
 	];
+	const [status, setStatus] = useState(true);
 	return (
 		<>
-			<CampaignLayout pageTitle={pageTitle} goBack>
+			<Layout>
+				<LayoutHeader title="CAMPAIGNS1" goBack>
+					<button
+						className={`cmn-btn header-btn ${
+							status ? "bg-base" : "bg-redish"
+						}`}
+						type="button"
+						onClick={() => setStatus(!status)}
+					>
+						{status ? "Start" : "Stop"}
+					</button>
+				</LayoutHeader>
 				<div className="layout-content">
 					<div className="border-bottom mb-20">
 						<ul className="setting-nav-menu">
@@ -40,9 +52,9 @@ const CampaignSingle = ({ pageTitle, children }) => {
 					</div>
 					{children}
 				</div>
-			</CampaignLayout>
+			</Layout>
 		</>
 	);
 };
 
-export default CampaignSingle;
+export default CampaignSingleLayout;
