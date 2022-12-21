@@ -1,9 +1,16 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { sidebar_menu } from "../assets/data/sidebar_menu";
 import author_img from "../assets/img/author.png";
 import { useGlobalContext } from "../context/context";
-import { Bar, Close, Cog, LogoWhite, SignOutIcon } from "../icons/IconTheme";
+import {
+	Bar,
+	Close,
+	Cog,
+	LeftAngle,
+	LogoWhite,
+	SignOutIcon,
+} from "../icons/IconTheme";
 const Layout = ({ children }) => {
 	const { isSidebarOpen, closeSidebar } = useGlobalContext();
 	return (
@@ -52,11 +59,23 @@ const Layout = ({ children }) => {
 	);
 };
 
-export const LayoutHeader = ({ title, children }) => {
+export const LayoutHeader = ({ title, goBack, children }) => {
 	const { openSidebar } = useGlobalContext();
+	const navigate = useNavigate();
 	return (
 		<header className="article-header container-fluid d-flex justify-content-between align-items-center">
-			<h4 className="title text-base text-uppercase m-0 me-auto">{title}</h4>
+			{goBack ? (
+				<h4
+					className="title text-base text-uppercase m-0 me-auto cursor-pointer"
+					onClick={() => navigate(-1)}
+				>
+					<LeftAngle /> {title}
+				</h4>
+			) : (
+				<h4 className="title text-base text-uppercase m-0 me-auto">
+					{title}
+				</h4>
+			)}
 			<div>{children}</div>
 			<div className="d-lg-none ms-3" onClick={openSidebar}>
 				<Bar />

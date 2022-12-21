@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import { plan } from "../../../assets/data/plan";
 import Layout, { LayoutHeader } from "../../../components/Layout";
 import { Check } from "../../../icons/IconTheme";
+import SettingNavMenu from "./components/SettingNavMenu";
 
 const SettingPlan = () => {
 	const [planDuration, setPlanDuration] = useState("monthly");
@@ -11,19 +11,7 @@ const SettingPlan = () => {
 		<Layout>
 			<LayoutHeader title="Setting"></LayoutHeader>
 			<div className="layout-content">
-				<div className="border-bottom mb-20">
-					<ul className="setting-nav-menu">
-						<li>
-							<NavLink to="/profile/setting/plans">Plans</NavLink>
-						</li>
-						<li>
-							<NavLink to="/profile/setting/billing">Billing</NavLink>
-						</li>
-						<li>
-							<NavLink to="/profile/setting/profile">Profile</NavLink>
-						</li>
-					</ul>
-				</div>
+				<SettingNavMenu />
 				<div className="mb-20 text-center">
 					<ul className="filter-btn">
 						<li

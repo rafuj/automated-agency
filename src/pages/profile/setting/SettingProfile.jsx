@@ -1,26 +1,14 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import FormGroup from "../../../components/FormGroup";
 import Layout, { LayoutHeader } from "../../../components/Layout";
+import SettingNavMenu from "./components/SettingNavMenu";
 
 const SettingProfile = () => {
 	return (
 		<Layout>
 			<LayoutHeader title="Setting"></LayoutHeader>
 			<div className="layout-content">
-				<div className="border-bottom mb-20">
-					<ul className="setting-nav-menu">
-						<li>
-							<NavLink to="/profile/setting/plans">Plans</NavLink>
-						</li>
-						<li>
-							<NavLink to="/profile/setting/billing">Billing</NavLink>
-						</li>
-						<li>
-							<NavLink to="/profile/setting/profile">Profile</NavLink>
-						</li>
-					</ul>
-				</div>
+				<SettingNavMenu />
 				<div className="row g-4">
 					<div className="col-md-6">
 						<div className="setting-profile-card">
