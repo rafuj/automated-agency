@@ -1789,3 +1789,146 @@ div[class*="col"] {
 	column-gap: 30px;
 	row-gap: 15px;
 }
+.__gap-5 {
+	gap: 5px;
+}
+.sequence-btn-grp {
+	h5 {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 22px;
+	}
+	@include breakpoint(xl) {
+		.cmn-btn {
+			font-size: 20px;
+		}
+	}
+	margin-bottom: 20px;
+}
+.text-20 {
+	font-weight: 500;
+	font-size: 20px;
+}
+.sequence-step {
+	background: var(--section);
+	border-radius: 20px;
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+	.sequence-top {
+		padding: 20px;
+		border-bottom: 1px solid var(--border);
+		.text {
+			font-weight: 400;
+			font-size: 12px;
+			line-height: 16px;
+		}
+		.name {
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 19px;
+		}
+	}
+	.wait-for {
+		margin: 15px 0 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		column-gap: 20px;
+		row-gap: 10px;
+		color: var(--title);
+		.form-control {
+			height: 25px;
+			width: 75px;
+			border-radius: 9px;
+			text-align: center;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 19px;
+			box-shadow: none;
+		}
+	}
+	.btn {
+		border-radius: 0;
+		width: 50%;
+		height: 60px;
+		&:not(:last-child) {
+			border-right: 1px solid var(--border);
+		}
+		&:active {
+			border-color: var(--base);
+		}
+		svg {
+			path[fill] {
+				fill: var(--text);
+			}
+		}
+		&:first-child {
+			svg {
+				path[fill] {
+					fill: var(--base);
+				}
+			}
+		}
+		&:hover {
+			svg {
+				path[fill] {
+					fill: var(--base);
+				}
+			}
+		}
+	}
+}
+input[type="number"] {
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button {
+		display: none;
+	}
+}
+.sequence-message {
+	padding: 28px 20px;
+	border-radius: 20px;
+	background: var(--section);
+	&-top {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+		.title {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 1;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			width: 100px;
+			flex-grow: 1;
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 25px;
+		}
+		.cmn-btn {
+			@include breakpoint(sm) {
+				font-size: 20px;
+				font-weight: 500;
+			}
+		}
+	}
+	.texts {
+		p {
+			margin: 0;
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+		@include breakpoint(sm) {
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 25px;
+			p:not(:last-child) {
+				margin-bottom: 26px;
+			}
+		}
+	}
+	margin-bottom: 20px;
+}

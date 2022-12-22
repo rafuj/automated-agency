@@ -49,7 +49,7 @@ const CampaignSchedule = () => {
 						</div>
 						<FormGroup label="Time" type="text" />
 						{/* <FormGroup label="Time" type="time" /> */}
-						<button type="submit" className="btn-base w-100">
+						<button type="submit" className="btn-base w-100 text-20">
 							Save
 						</button>
 					</div>

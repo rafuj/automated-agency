@@ -7,6 +7,7 @@ import CampaignLead from "./pages/campaigns/CampaignLead";
 import CampaignList from "./pages/campaigns/CampaignList";
 import CampaignOption from "./pages/campaigns/CampaignOption";
 import CampaignSchedule from "./pages/campaigns/CampaignSchedule";
+import CampaignSequence from "./pages/campaigns/CampaignSequence";
 import AddCsv from "./pages/lead-lists/AddCsv";
 import AddGoogle from "./pages/lead-lists/AddGoogle";
 import AddGoogleCriteria from "./pages/lead-lists/AddGoogleCriteria";
@@ -75,7 +76,7 @@ function App() {
 							<Route index element={<CampaignAnalytics />} />
 							<Route path="analytics" element={<CampaignAnalytics />} />
 							<Route path="lead" element={<CampaignLead />} />
-							<Route path="sequence" element={<CampaignAnalytics />} />
+							<Route path="sequence" element={<CampaignSequence />} />
 							<Route path="schedule" element={<CampaignSchedule />} />
 							<Route path="option" element={<CampaignOption />} />
 						</Route>
