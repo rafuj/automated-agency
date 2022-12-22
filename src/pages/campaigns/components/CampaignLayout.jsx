@@ -30,7 +30,7 @@ const CampaignLayout = ({ pageTitle, goBack, children }) => {
 							<Close />
 						</span>
 					</div>
-					<Link to="/leadlist/add" className="cmn-btn">
+					<Link to="/campaign/add" className="cmn-btn">
 						Add New
 					</Link>
 				</div>

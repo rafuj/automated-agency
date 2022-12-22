@@ -1932,3 +1932,33 @@ input[type="number"] {
 	}
 	margin-bottom: 20px;
 }
+.__common-modal {
+	.modal-dialog {
+		max-width: 572px;
+	}
+	.modal-content {
+		background: transparent;
+		border: none;
+		.modal-body {
+			padding: 0;
+			position: relative;
+			.lead-card {
+				margin: 0 auto;
+			}
+		}
+	}
+}
+.modal-close {
+	position: absolute;
+	right: 40px;
+	top: 30px;
+	cursor: pointer;
+	svg {
+		width: 16px;
+	}
+}
+.control--border {
+	.form-control {
+		border-color: var(--border);
+	}
+}

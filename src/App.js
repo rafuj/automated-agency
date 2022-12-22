@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Analytics from "./pages/analytics/Analytics";
 import SignIn from "./pages/auth/SignIn";
 import SignUp from "./pages/auth/SignUp";
+import AddNewCampaign from "./pages/campaigns/AddNewCampaign";
 import CampaignAnalytics from "./pages/campaigns/CampaignAnalytics";
 import CampaignLead from "./pages/campaigns/CampaignLead";
 import CampaignList from "./pages/campaigns/CampaignList";
@@ -72,6 +73,7 @@ function App() {
 					</Route>
 					<Route path="campaign">
 						<Route index element={<CampaignList />} />
+						<Route path="add" element={<AddNewCampaign />} />
 						<Route path=":id">
 							<Route index element={<CampaignAnalytics />} />
 							<Route path="analytics" element={<CampaignAnalytics />} />
