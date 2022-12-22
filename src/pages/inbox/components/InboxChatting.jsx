@@ -1,6 +1,6 @@
 import React from "react";
-import { inbox_data } from "../../../../assets/data/inbox_data";
-import { ImageIcon, LinkIcon, SentIcon } from "../../../../icons/IconTheme";
+import { inbox_data } from "../../../assets/data/inbox_data";
+import { ImageIcon, LinkIcon, SentIcon } from "../../../icons/IconTheme";
 
 const InboxChatting = ({ activeIndex }) => {
 	const { img, name } = inbox_data[activeIndex];

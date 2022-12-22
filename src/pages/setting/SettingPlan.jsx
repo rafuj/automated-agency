@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { plan } from "../../../assets/data/plan";
-import Layout, { LayoutHeader } from "../../../components/Layout";
-import { Check } from "../../../icons/IconTheme";
+import { plan } from "../../assets/data/plan";
+import Layout, { LayoutHeader } from "../../components/Layout";
+import { Check } from "../../icons/IconTheme";
 import SettingNavMenu from "./components/SettingNavMenu";
 
 const SettingPlan = () => {

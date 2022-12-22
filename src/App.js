@@ -9,6 +9,7 @@ import CampaignList from "./pages/campaigns/CampaignList";
 import CampaignOption from "./pages/campaigns/CampaignOption";
 import CampaignSchedule from "./pages/campaigns/CampaignSchedule";
 import CampaignSequence from "./pages/campaigns/CampaignSequence";
+import Inbox from "./pages/inbox/Inbox";
 import AddCsv from "./pages/lead-lists/AddCsv";
 import AddGoogle from "./pages/lead-lists/AddGoogle";
 import AddGoogleCriteria from "./pages/lead-lists/AddGoogleCriteria";
@@ -20,10 +21,9 @@ import AddNewLead from "./pages/lead-lists/AddNewLead";
 import CreateLead from "./pages/lead-lists/CreateLead";
 import LeadList from "./pages/lead-lists/LeadList";
 import SelectLeadSource from "./pages/lead-lists/SelectLeadSource";
-import Inbox from "./pages/profile/inbox/Inbox";
-import SettingBilling from "./pages/profile/setting/SettingBilling";
-import SettingPlan from "./pages/profile/setting/SettingPlan";
-import SettingProfile from "./pages/profile/setting/SettingProfile";
+import SettingBilling from "./pages/setting/SettingBilling";
+import SettingPlan from "./pages/setting/SettingPlan";
+import SettingProfile from "./pages/setting/SettingProfile";
 
 function App() {
 	return (

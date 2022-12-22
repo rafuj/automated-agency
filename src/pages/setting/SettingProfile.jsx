@@ -1,6 +1,6 @@
 import React from "react";
-import FormGroup from "../../../components/FormGroup";
-import Layout, { LayoutHeader } from "../../../components/Layout";
+import FormGroup from "../../components/FormGroup";
+import Layout, { LayoutHeader } from "../../components/Layout";
 import SettingNavMenu from "./components/SettingNavMenu";
 
 const SettingProfile = () => {

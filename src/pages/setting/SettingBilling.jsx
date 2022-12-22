@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Layout, { LayoutHeader } from "../../../components/Layout";
-import { DownLoadIcon } from "../../../icons/IconTheme";
+import Layout, { LayoutHeader } from "../../components/Layout";
+import { DownLoadIcon } from "../../icons/IconTheme";
 import SettingNavMenu from "./components/SettingNavMenu";
 
 const SettingBilling = () => {
