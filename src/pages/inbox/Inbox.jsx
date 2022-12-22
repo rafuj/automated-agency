@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import img from "../../assets/img/author.png";
 import Layout, { LayoutHeader } from "../../components/Layout";
-import { Cog, GroupTeam, SignOutIcon } from "../../icons/IconTheme";
+import { Cog, GroupTeam, IconDown, SignOutIcon } from "../../icons/IconTheme";
 import InboxChatting from "./components/InboxChatting";
 import InboxSidebar from "./components/InboxSidebar";
 const Inbox = () => {
@@ -16,6 +16,10 @@ const Inbox = () => {
 							<img src={img} alt="img" />
 							<div>{"muraddc0@gmail.com".substring(0, 10) + "..."}</div>
 							<h6>(20)</h6>
+
+							<div className="right-icon">
+								<IconDown />
+							</div>
 						</Link>
 						<ul className="__dropdown-menu">
 							<li>

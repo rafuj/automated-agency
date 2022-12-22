@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Accounts from "./pages/accounts/Accounts";
 import Analytics from "./pages/analytics/Analytics";
 import SignIn from "./pages/auth/SignIn";
 import SignUp from "./pages/auth/SignUp";
@@ -33,7 +34,6 @@ function App() {
 					<Route path="/" element={<SignIn />} />
 					<Route path="inbox">
 						<Route index element={<Inbox />} />
-						{/* <Route path="inbox" element={<Inbox />} /> */}
 					</Route>
 					<Route path="setting">
 						<Route index element={<SettingPlan />} />
@@ -45,6 +45,9 @@ function App() {
 					<Route path="signup" element={<SignUp />} />
 					<Route path="analytics">
 						<Route index element={<Analytics />} />
+					</Route>
+					<Route path="account">
+						<Route index element={<Accounts />} />
 					</Route>
 					<Route path="leadlist">
 						<Route index element={<LeadList />} />

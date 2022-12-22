@@ -48,7 +48,10 @@ const Layout = ({ children }) => {
 							<Cog />
 						</NavLink>
 					</div>
-					<button className="bottom-btn">
+					<button
+						className="bottom-btn"
+						onClick={() => navigate("/signin")}
+					>
 						<SignOutIcon />
 					</button>
 				</div>
