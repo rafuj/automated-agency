@@ -53,8 +53,12 @@ const CampaignSchedule = () => {
 				</div>
 				<div className="col-md-6">
 					<ul className="schedule-list">
-						{["", "", ""].map((item, i) => (
-							<ScheduleListItem key={i} />
+						{[
+							{ title: "schedule1" },
+							{ title: "schedule2" },
+							{ title: "schedule3" },
+						].map((item, i) => (
+							<ScheduleListItem {...item} key={i} />
 						))}
 					</ul>
 				</div>
@@ -77,13 +81,13 @@ const CheckItem = ({ day, active }) => {
 		</label>
 	);
 };
-const ScheduleListItem = () => {
+const ScheduleListItem = ({ title }) => {
 	const [status, setStatus] = useState(true);
 	return (
 		status && (
 			<li>
-				<span>schedule</span>
-				<span onClick={() => setStatus(!status)}>
+				<span>{title}</span>
+				<span className="cursor-pointer" onClick={() => setStatus(!status)}>
 					<Trash />
 				</span>
 			</li>
