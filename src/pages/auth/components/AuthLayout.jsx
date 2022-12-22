@@ -11,7 +11,7 @@ const AuthLayout = ({ text1, text2, link, children }) => {
 						<Link className="logo" to="/">
 							<Logo />
 						</Link>
-						<div>
+						<div className="auth-header-content">
 							{text1}
 							<Link to={link} className="link">
 								{text2}

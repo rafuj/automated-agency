@@ -11,7 +11,7 @@ const SignIn = () => {
 			<AuthLayout
 				text1="No account ?"
 				text2="Create an account"
-				link="/auth/signup"
+				link="/signup"
 			>
 				<form>
 					<div className="auth-content">
@@ -25,8 +25,11 @@ const SignIn = () => {
 						<FormGroup label="Password" type="password" />
 						<CheckGroup text="Auto Fill Password" />
 						<div className="__my-30">
-							<button type="submit" className="btn-base">
-								Submit
+							<button
+								type="submit"
+								className="btn-base font-medium text-20"
+							>
+								Login
 							</button>
 						</div>
 						<div className="text-center">

@@ -7,7 +7,7 @@ const CheckGroup = ({ text, checked, ...rest }) => {
 			<input
 				type="checkbox"
 				className="form-check-input"
-				value={status}
+				checked={status}
 				{...rest}
 				onChange={(e) => setStatus(e.target.checked)}
 			/>

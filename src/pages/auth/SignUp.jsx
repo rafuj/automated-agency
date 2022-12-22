@@ -10,7 +10,7 @@ const SignUp = () => {
 			<AuthLayout
 				text1="Already have an account ?"
 				text2="login"
-				link="/auth/signin"
+				link="/signin"
 			>
 				<form>
 					<div className="auth-content">
@@ -34,7 +34,10 @@ const SignUp = () => {
 							.
 						</div>
 						<div className="__my-30">
-							<button type="submit" className="btn-base">
+							<button
+								type="submit"
+								className="btn-base font-medium text-20"
+							>
 								Create account
 							</button>
 						</div>

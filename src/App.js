@@ -31,21 +31,18 @@ function App() {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<SignIn />} />
-					<Route path="profile">
+					<Route path="inbox">
 						<Route index element={<Inbox />} />
-						<Route path="inbox" element={<Inbox />} />
-						<Route path="setting">
-							<Route index element={<SettingPlan />} />
-							<Route path="plans" element={<SettingPlan />} />
-							<Route path="billing" element={<SettingBilling />} />
-							<Route path="profile" element={<SettingProfile />} />
-						</Route>
+						{/* <Route path="inbox" element={<Inbox />} /> */}
 					</Route>
-					<Route path="auth">
-						<Route index element={<SignIn />} />
-						<Route path="signin" element={<SignIn />} />
-						<Route path="signup" element={<SignUp />} />
+					<Route path="setting">
+						<Route index element={<SettingPlan />} />
+						<Route path="plans" element={<SettingPlan />} />
+						<Route path="billing" element={<SettingBilling />} />
+						<Route path="profile" element={<SettingProfile />} />
 					</Route>
+					<Route path="signin" element={<SignIn />} />
+					<Route path="signup" element={<SignUp />} />
 					<Route path="analytics">
 						<Route index element={<Analytics />} />
 					</Route>

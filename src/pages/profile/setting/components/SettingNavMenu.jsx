@@ -6,13 +6,13 @@ const SettingNavMenu = () => {
 		<div className="border-bottom mb-20">
 			<ul className="setting-nav-menu">
 				<li>
-					<NavLink to="/profile/setting/plans">Plans</NavLink>
+					<NavLink to="/setting/plans">Plans</NavLink>
 				</li>
 				<li>
-					<NavLink to="/profile/setting/billing">Billing</NavLink>
+					<NavLink to="/setting/billing">Billing</NavLink>
 				</li>
 				<li>
-					<NavLink to="/profile/setting/profile">Profile</NavLink>
+					<NavLink to="/setting/profile">Profile</NavLink>
 				</li>
 			</ul>
 		</div>

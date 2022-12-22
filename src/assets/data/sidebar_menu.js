@@ -29,7 +29,7 @@ export const sidebar_menu = [
 	},
 	{
 		icon: <InboxIcon />,
-		link: "/profile",
+		link: "/inbox",
 		text: "Inbox",
 	},
 ];

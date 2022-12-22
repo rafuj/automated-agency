@@ -13,6 +13,7 @@ import {
 } from "../icons/IconTheme";
 const Layout = ({ children }) => {
 	const { isSidebarOpen, closeSidebar } = useGlobalContext();
+	const navigate = useNavigate();
 	return (
 		<main className="main">
 			<aside className={`sidebar ${isSidebarOpen ? "active" : ""}`}>
@@ -42,12 +43,14 @@ const Layout = ({ children }) => {
 						))}
 				</ul>
 				<div className="sidebar-bottom-btns">
-					<Link to="#" className="bottom-btn">
-						<Cog />
-					</Link>
-					<Link to="#" className="bottom-btn">
+					<div onClick={() => navigate("/setting/plans")} className="w-50">
+						<NavLink to="/setting" className="bottom-btn w-100">
+							<Cog />
+						</NavLink>
+					</div>
+					<button className="bottom-btn">
 						<SignOutIcon />
-					</Link>
+					</button>
 				</div>
 			</aside>
 			<article className="article">{children}</article>

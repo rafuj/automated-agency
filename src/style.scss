@@ -142,6 +142,12 @@ h6 {
 		margin-bottom: 30px;
 	}
 }
+.auth-header-content {
+	font-weight: 500;
+	a {
+		font-weight: 600;
+	}
+}
 .login-with-google {
 	width: 100%;
 	background: transparent;
@@ -154,6 +160,9 @@ h6 {
 	font-size: 14px;
 	line-height: 19px;
 	color: var(--title);
+	svg {
+		margin-right: 8px;
+	}
 }
 .or {
 	display: flex;
@@ -432,6 +441,11 @@ h6 {
 			border-right: 1px solid rgba(#ffffff, 0.1);
 		}
 		border-top: 1px solid rgba(#ffffff, 0.1);
+		&.active {
+			border-color: var(--redish);
+			background: var(--redish);
+			color: var(--white);
+		}
 	}
 }
 .article-header {
@@ -1961,4 +1975,7 @@ input[type="number"] {
 	.form-control {
 		border-color: var(--border);
 	}
+}
+.font-medium {
+	font-weight: 500;
 }

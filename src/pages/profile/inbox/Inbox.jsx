@@ -19,12 +19,12 @@ const Inbox = () => {
 						</Link>
 						<ul className="__dropdown-menu">
 							<li>
-								<Link to="/profile/setting/profile">
+								<Link to="/setting/profile">
 									<GroupTeam /> <span>Profile</span>
 								</Link>
 							</li>
 							<li>
-								<Link to="/profile/setting/plans">
+								<Link to="/setting/plans">
 									<Cog /> <span>Setting</span>
 								</Link>
 							</li>
