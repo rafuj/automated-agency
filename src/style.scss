@@ -962,6 +962,7 @@ body {
 		border-radius: 19px;
 		width: 100%;
 		transition: all ease 0.3s;
+		font-weight: 600;
 	}
 	transition: all ease 0.3s;
 	&:nth-of-type(3n + 2),
@@ -1006,6 +1007,7 @@ body {
 	align-items: center;
 	gap: 15px;
 	h6 {
+		font-weight: 500;
 		margin-bottom: 10px;
 	}
 	ul {
@@ -1095,6 +1097,9 @@ body {
 			border-radius: 15px;
 			padding: 7px 20px;
 			font-weight: 500;
+			@include breakpoint(xl) {
+				font-size: 20px;
+			}
 		}
 		.btn-outline-primary {
 			border-color: var(--border);
