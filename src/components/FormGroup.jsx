@@ -1,9 +1,9 @@
 import React from "react";
 import { IconDown } from "../icons/IconTheme";
 
-const FormGroup = ({ label, data, ...rest }) => {
+const FormGroup = ({ label, data, className, ...rest }) => {
 	return (
-		<div className="form-group">
+		<div className={`form-group ${className ? className : ""}`}>
 			{label && (
 				<label className="form-label" htmlFor={label}>
 					{label}

@@ -1729,3 +1729,59 @@ div[class*="col"] {
 		width: 130px;
 	}
 }
+.schedule-days {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 16px;
+	row-gap: 10px;
+	margin-bottom: 20px;
+	label {
+		color: var(--base);
+		border: 1px solid var(--base);
+		font-weight: 500;
+		padding: 5px 10px;
+		border-radius: 10px;
+		line-height: 19px;
+		cursor: pointer;
+		flex-grow: 1;
+		max-width: 70px;
+		text-align: center;
+		&.checked {
+			background: var(--base);
+			color: var(--white);
+		}
+	}
+}
+.schedule-form-card {
+	padding: 20px;
+	border-radius: 15px;
+	background: var(--section);
+	.form-control {
+		background: var(--body);
+	}
+}
+.schedule-list {
+	display: flex;
+	flex-direction: column;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 22px;
+	gap: 15px;
+	li {
+		padding: 20px;
+		display: flex;
+		justify-content: space-between;
+		color: var(--title);
+		text-transform: capitalize;
+
+		border-radius: 15px;
+		background: var(--section);
+		@include breakpoint(max-sm) {
+			font-size: 14px;
+			padding: 15px;
+			svg {
+				width: 15px;
+			}
+		}
+	}
+}
