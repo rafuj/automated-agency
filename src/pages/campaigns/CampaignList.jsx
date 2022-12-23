@@ -47,16 +47,20 @@ const TableRow = ({ id, active }) => {
 			<td>8</td>
 			<td>5</td>
 			<td className="text-end">
-				<button
-					className={`cmn-btn  me-3 ${status ? "" : "inactive trn-x-2"}`}
-					type="button"
-					onClick={() => setStatus(!status)}
-				>
-					{status ? "Start" : "Stop"}
-				</button>
-				<Link to={`/campaign/1/analytics`}>
-					<EditIcon />
-				</Link>
+				<div className="d-flex align-items-center justify-content-end">
+					<button
+						className={`cmn-btn  me-3 ${
+							status ? "" : "inactive trn-x-2"
+						}`}
+						type="button"
+						onClick={() => setStatus(!status)}
+					>
+						{status ? "Start" : "Stop"}
+					</button>
+					<Link to={`/campaign/1/analytics`}>
+						<EditIcon />
+					</Link>
+				</div>
 			</td>
 		</tr>
 	);
