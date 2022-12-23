@@ -48,7 +48,7 @@ const TableRow = ({ id, active }) => {
 			<td>5</td>
 			<td className="text-end">
 				<button
-					className={`cmn-btn ${status ? "me-3" : "inactive me-4"}`}
+					className={`cmn-btn  me-3 ${status ? "" : "inactive trn-x-2"}`}
 					type="button"
 					onClick={() => setStatus(!status)}
 				>

@@ -1412,7 +1412,7 @@ body {
 .word-nowrap {
 	white-space: nowrap;
 }
-
+.__account-table,
 .__campaign-table {
 	thead {
 		tr {
@@ -1753,6 +1753,20 @@ div[class*="col"] {
 		width: 130px;
 	}
 }
+.table-author-2 {
+	img {
+		width: 30px;
+		aspect-ratio: 1;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 22px;
+	span {
+		width: 130px;
+	}
+}
 .schedule-days {
 	display: flex;
 	flex-wrap: wrap;
@@ -1988,4 +2002,39 @@ input[type="number"] {
 }
 .font-medium {
 	font-weight: 500;
+}
+.fill-text {
+	svg path {
+		fill: var(--title);
+	}
+}
+.rounded-8 {
+	border-radius: 10px;
+}
+.trn-x-2 {
+	transform: translateX(-8px);
+}
+.__account-table {
+	tbody tr {
+		td {
+			padding: 15px 20px;
+		}
+	}
+}
+.g--2 {
+	gap: 8px;
+}
+.__account-modal {
+	.modal-dialog {
+		max-width: 900px;
+	}
+	.modal-body {
+		padding: 20px;
+		@include breakpoint(lg) {
+			padding: 35px 40px;
+		}
+	}
+}
+.mb-30 {
+	margin-bottom: 30px;
 }
