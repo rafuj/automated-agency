@@ -10,7 +10,7 @@ const data = [
 ];
 const chart__data = {
 	label: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-	dataSet: [12, 12, 12, 20, 12, 12, 12],
+	dataSet: [13, 13, 13, 20, 13, 16, 13],
 };
 const AccountModalWarmup = () => {
 	return (

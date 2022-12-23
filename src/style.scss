@@ -2285,7 +2285,7 @@ input[type="number"] {
 			bottom: 14px;
 			width: calc(100% - 50px);
 			// height: calc(100% - 15px);
-			height: 188px;
+			height: 202px;
 			display: flex;
 			flex-direction: column;
 			@include breakpoint(max-sm) {
@@ -2328,9 +2328,9 @@ input[type="number"] {
 					justify-content: center;
 					color: var(--white);
 					transition: all ease 0.3s;
-					position: absolute;
-					bottom: calc(100% + 3px);
-					left: 0;
+					// position: absolute;
+					// bottom: calc(100% + 3px);
+					// left: 0;
 				}
 
 				&.active,

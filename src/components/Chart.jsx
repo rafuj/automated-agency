@@ -31,9 +31,7 @@ const Chart = ({ data }) => {
 								{dataSet &&
 									dataSet.map((item, i) => (
 										<span
-											className={`item ${
-												item === maxValue ? "active" : ""
-											}`}
+											className="item"
 											key={i}
 											style={{
 												height: (dataSet[i] / maxValue) * 100 + "%",
