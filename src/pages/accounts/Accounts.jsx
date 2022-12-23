@@ -54,9 +54,6 @@ const data = [
 const Accounts = () => {
 	const [filterOpen, setFilterOpen] = useState(false);
 	const [popup, setPopup] = useState(false);
-	const closePopup = () => {
-		setPopup(false);
-	};
 	return (
 		<Layout>
 			<LayoutHeader title="Accounts">
@@ -91,18 +88,23 @@ const Accounts = () => {
 					<table className="table __account-table table-borderless">
 						<tbody>
 							{data.map((item, i) => (
-								<TableRow {...item} key={i} />
+								<TableRow
+									{...item}
+									key={i}
+									setPopup={setPopup}
+									popup={popup}
+								/>
 							))}
 						</tbody>
 					</table>
 				</div>
-				<AccountModal popup={popup} closePopup={closePopup} />
+				<AccountModal popup={popup} setPopup={setPopup} />
 			</div>
 		</Layout>
 	);
 };
 
-const TableRow = ({ title, img, active }) => {
+const TableRow = ({ title, img, active, setPopup, popup }) => {
 	const [status, setStatus] = useState(active);
 	return (
 		<tr>
@@ -134,7 +136,7 @@ const TableRow = ({ title, img, active }) => {
 				</button>
 			</td>
 			<td className="text-end">
-				<Link to="#" className="fill-text">
+				<Link to="#" className="fill-text" onClick={() => setPopup(!popup)}>
 					<Cog />
 				</Link>
 			</td>
