@@ -1724,6 +1724,9 @@ div[class*="col"] {
 .bg--success {
 	background: var(--success);
 }
+.border--success {
+	border-color: var(--success);
+}
 @include breakpoint(max-sm) {
 	.header-btn {
 		font-size: 14px;
@@ -2032,9 +2035,9 @@ input[type="number"] {
 		padding: 0;
 	}
 	.__body {
-		padding: 20px;
+		padding: 0 20px 20px;
 		@include breakpoint(lg) {
-			padding: 35px 40px;
+			padding: 0 40px 30px;
 		}
 	}
 	.__header {
@@ -2051,4 +2054,33 @@ input[type="number"] {
 }
 .mb-30 {
 	margin-bottom: 30px;
+}
+.text-title {
+	color: var(--title);
+}
+.cmn-btn {
+	&.text-title {
+		color: var(--title);
+	}
+	&.bg--success {
+		&:hover {
+			color: var(--success);
+		}
+	}
+}
+.py-20 {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.pt-20 {
+	padding-top: 20px;
+}
+.pb-20 {
+	padding-bottom: 20px;
+}
+.border-botttom {
+	border-bottom: 1px solid var(--border);
+}
+.mb-20 {
+	margin-bottom: 20px;
 }

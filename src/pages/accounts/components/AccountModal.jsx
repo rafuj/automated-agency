@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
 import { CloseCircle } from "../../../icons/IconTheme";
+import AccountModalProfile from "./AccountModalProfile";
+import AccountModalSetting from "./AccountModalSetting";
+import AccountModalWarmup from "./AccountModalWarmup";
 import ModalNavMenu from "./ModalNavMenu";
 
 const AccountModal = ({ popup, closePopup }) => {
@@ -20,7 +23,11 @@ const AccountModal = ({ popup, closePopup }) => {
 					dataStatus={dataStatus}
 					setDataStatus={setDataStatus}
 				/>
-				<div className="__body"></div>
+				<div className="__body">
+					{dataStatus === "warmup" && <AccountModalWarmup />}
+					{dataStatus === "profile" && <AccountModalProfile />}
+					{dataStatus === "setting" && <AccountModalSetting />}
+				</div>
 			</Modal.Body>
 		</Modal>
 	);
