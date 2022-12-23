@@ -32,7 +32,7 @@ const AccountModalSetting = () => {
 					/>
 				</div>
 			</div>
-			<div className="border-botttom pt-20 mb-20"></div>
+			<div className="border-botttom pt-10 mb-20"></div>
 			<div className="row gy-3">
 				<div className="col-sm-6 col-md-3">
 					<FormGroup

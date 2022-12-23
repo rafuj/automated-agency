@@ -12,9 +12,12 @@ const AccountModal = ({ popup, closePopup }) => {
 		<Modal show={true} size="xl" centered className="__account-modal">
 			<Modal.Body>
 				<div className="__header">
-					<div className="d-flex justify-content-between align-items-center mb-30">
-						<h4 className="main-title m-0">Setting</h4>
-						<div onClick={closePopup()} className="cursor-pointer">
+					<div className="d-flex justify-content-between align-items-center">
+						<h4 className="main-title m-0">Settings</h4>
+						<div
+							onClick={closePopup()}
+							className="cursor-pointer close--icon"
+						>
 							<CloseCircle />
 						</div>
 					</div>

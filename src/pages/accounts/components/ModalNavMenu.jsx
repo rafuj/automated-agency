@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ModalNavMenu = ({ dataStatus, setDataStatus }) => {
 	return (
-		<div className="border-bottom mb-30">
+		<div className="border-bottom mb-20">
 			<ul className="setting-nav-menu">
 				<li>
 					<Link

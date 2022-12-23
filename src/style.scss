@@ -868,6 +868,9 @@ body {
 				border-color: var(--base);
 				color: var(--base);
 			}
+			@include breakpoint(max-sm) {
+				font-size: 14px;
+			}
 		}
 	}
 }
@@ -1767,7 +1770,28 @@ div[class*="col"] {
 	font-size: 16px;
 	line-height: 22px;
 	span {
-		width: 130px;
+		min-width: 130px;
+	}
+}
+.feed-author {
+	gap: 10px;
+	display: flex;
+	align-items: center;
+	img {
+		width: 30px;
+		aspect-ratio: 1;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 22px;
+	color: var(--title);
+	small {
+		color: var(--text);
+		font-size: 12px;
+		line-height: 16px;
+		padding-left: 5px;
 	}
 }
 .schedule-days {
@@ -1849,6 +1873,9 @@ div[class*="col"] {
 .text-20 {
 	font-weight: 500;
 	font-size: 20px;
+	@include breakpoint(max-sm) {
+		font-size: 16px;
+	}
 }
 .sequence-step {
 	background: var(--section);
@@ -2037,13 +2064,14 @@ input[type="number"] {
 	.__body {
 		padding: 0 20px 20px;
 		@include breakpoint(lg) {
-			padding: 0 40px 30px;
+			padding: 0 40px 24px;
 		}
 	}
 	.__header {
 		padding: 20px 20px 0;
 		@include breakpoint(lg) {
-			padding: 35px 40px 0;
+			// padding: 35px 40px 22px;
+			padding: 30px 40px 17px;
 		}
 	}
 	.main-title {
@@ -2051,6 +2079,20 @@ input[type="number"] {
 		font-size: 25px;
 		line-height: 34px;
 	}
+	@include breakpoint(max-sm) {
+		.main-title {
+			font-size: 20px;
+			line-height: 28px;
+		}
+		.close--icon {
+			svg {
+				width: 24px;
+			}
+		}
+	}
+}
+.pt-10 {
+	padding-top: 10px;
 }
 .mb-30 {
 	margin-bottom: 30px;
@@ -2066,7 +2108,28 @@ input[type="number"] {
 		&:hover {
 			color: var(--success);
 		}
+		&.btn-outline {
+			border-color: var(--success);
+			color: var(--success);
+			&:hover {
+				background: var(--success);
+				color: var(--white);
+				svg {
+					path {
+						fill: var(--white);
+					}
+				}
+			}
+		}
 	}
+}
+.feed-btn {
+	padding: 5.5px 28px;
+	svg {
+		margin-right: 9.8px;
+	}
+	display: flex;
+	align-items: center;
 }
 .py-20 {
 	padding-top: 20px;
@@ -2083,4 +2146,44 @@ input[type="number"] {
 }
 .mb-20 {
 	margin-bottom: 20px;
+}
+.profile-data-grp {
+	margin-top: 20px;
+	.img {
+		border-radius: 15px;
+		object-fit: cover;
+		width: 100%;
+		max-width: 171px;
+	}
+	display: flex;
+	flex-wrap: wrap;
+	.form-fields {
+		width: 100%;
+		padding-top: 20px;
+		@include breakpoint(sm) {
+			width: 260px;
+			flex-grow: 1;
+			padding-top: 0;
+			padding-left: 20px;
+		}
+	}
+	margin-bottom: 30px;
+}
+.feed-title {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 22px;
+}
+.banner-img {
+	@include breakpoint(max-sm) {
+		height: 180px;
+		object-fit: cover;
+	}
+}
+.react--icons {
+	gap: 15px;
+	margin-top: 7px;
+}
+.mb-12 {
+	margin-bottom: 12px;
 }
